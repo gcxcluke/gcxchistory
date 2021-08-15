@@ -97,7 +97,7 @@ for(i in 1:length){
 ![Coach Betsy](CoachBetsy.jpg)
 </center>
 
-### Todd McDaniel (Men's Coach: 2010-2012, 2013-2014)
+### Todd McDaniel (Men's Coach: 2010-2014, Women's Coach: 2013-2014)
 
 <center>
 ![Coach Todd](CoachTodd.jpg)
