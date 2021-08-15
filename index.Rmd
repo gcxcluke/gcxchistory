@@ -97,10 +97,16 @@ for(i in 1:length){
 ![Coach Betsy](CoachBetsy.jpg)
 </center>
 
+Assistant Coach: 2005-2009
+
 ### Todd McDaniel (Men's Coach: 2010-2014, Women's Coach: 2013-2014)
 
 <center>
 ![Coach Todd](CoachTodd.jpg)
 </center>
 
+Assistant Coach: 2002-2009
+
 ### Luke Garnett (2015-Present)
+
+Assistant Coach: 2010-2014
