@@ -1,5 +1,5 @@
 ---
-title: "The History Georgetown College Cross Country"
+title: "The History Of Georgetown College Cross Country"
 author: "By: Luke Garnett"
 date: "Updated:`r Sys.time()`"
 output:
@@ -22,17 +22,70 @@ library(googlesheets4)
 library(ggplot2)
 
 history <- read_sheet("https://docs.google.com/spreadsheets/d/1QHzJYKRBgV-yQtBsh1UF5412YH71o__I7tq_tC58380/edit?usp=sharing")
+history$Time <- strftime(history$Time, format="%M:%S", tz="GMT")
+history$Date <- strftime(history$Date, format="%D", tz="GMT")
+roster <- read_sheet("https://docs.google.com/spreadsheets/d/1FqSP5VIGAXaSw_zQO4P6_oykYIO1dbtU2xHdADdE9Qo/edit#gid=0")
 ```
 
 # Menu {.tabset .tabset-fade .tabset-pills}
 
-## All Time List
-
-Coming Soon!
 
 ## Year by Year {.tabset .tabset-fade .tabset-pills}
 
+### 1982 {.tabset .tabset-fade .tabset-pills}
+#### Roster
+#### Results
+#### Summary
+#### Awards / Other
+### 1983 {.tabset .tabset-fade .tabset-pills}
+#### Roster
+#### Results
+#### Summary
+#### Awards / Other
+### 1984 {.tabset .tabset-fade .tabset-pills}
+#### Roster
+#### Results
+#### Summary
+#### Awards / Other
+### 1985 {.tabset .tabset-fade .tabset-pills}
+
+#### Roster
+
 ```{r echo=FALSE, results="asis"}
+year <- roster[roster$Year==1985,]
+datatable(year, options = list(
+  columnDefs = list(list(className = 'dt-center', targets = 5)),
+  pageLength = 20,
+  lengthMenu = c(5, 10, 15, 20)),
+  rownames= FALSE
+)
+```
+
+
+#### Results
+
+```{r echo=FALSE, results="asis"}
+year <- history[history$Year==1985,]
+datatable(year, options = list(
+  columnDefs = list(list(className = 'dt-center', targets = 5)),
+  pageLength = 15,
+  lengthMenu = c(5, 10, 15, 20),
+  order = list(list(4, 'asc'), list(5, 'asc'))
+  
+  ),
+  rownames= FALSE
+)
+```
+
+#### Summary
+
+
+
+#### Awards / Other
+
+
+
+```{r eval = FALSE, echo=FALSE, results="asis"}
 years <- unique(history$Year)
 length <- length(years)
 
@@ -69,9 +122,14 @@ for(i in 1:length){
 }
 ```
 
+## All Time List
+
+Coming Soon!
+
+
 ## Coaches
 
-### Jim McCormick (1981-1991)
+### Jim McCormick (1982-1991)
 
 <center>
 ![Coach McCormick](CoachMccormick.png)
